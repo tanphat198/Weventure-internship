@@ -25,11 +25,11 @@ class exchangeService(Exchange):
         return self.get(params = querystring)
 
     def get_by_history_with_symbols(self , day1 , month1 , year1 , day2 , month2 , year2 , moneyunit , type):
-        querystring =  {"/history?start_at":"{}-{}-{}"}.format(year1 , month1 , day1), {"end_at":"{}-{}-{}".format(year2 , month2 , day2), "symbols":"{},{}".format(moneyunit , type)}
+        querystring =  "/history?start_at={}-{}-{}&end_at={}-{}-{}&symbols={},{}".format(year1 , month1 , day1 , year2 , month2 , day2 , moneyunit , type)
         return self.get(params = querystring)
 
     def get_by_history_with_base(self , day1 , month1 , year1 , day2 , month2 , year2 , moneyunit):
-        querystring =  {"/history?start_at":"{}-{}-{}"}.format(year1 , month1 , day1), {"end_at":"{}-{}-{}".format(year2 , month2 , day2), "base":"{}".format(moneyunit)}
+        querystring =  "/history?start_at={}-{}-{}&end_at={}-{}-{}&base={}".format(year1 , month1 , day1 , year2 , month2 , day2 , moneyunit)
         return self.get(params = querystring)
      
 
