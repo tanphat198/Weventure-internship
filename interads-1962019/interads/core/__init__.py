@@ -1,7 +1,5 @@
 import types
-
 import inject as injection
-
 
 class ComponentContainer(object):
     """
@@ -37,3 +35,4 @@ class ComponentContainer(object):
                     binder.bind(cls, instance)
 
         injection.configure(inject_binder)
+

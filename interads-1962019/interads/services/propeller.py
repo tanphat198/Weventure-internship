@@ -2,7 +2,6 @@ from core.delegation.responsehandler import ResponseHandler
 from core.resource import APIResource, Configuration
 from services.object import PropellerObject
 
-
 class PropellerService(APIResource):
     def __init__(self):
         config = Configuration("https://ssp-api.propellerads.com/v5", auth_handler=False, handler=PropellerHandler, service_name='Propellerads Service(AMP)')
@@ -19,4 +18,5 @@ class PropellerHandler(ResponseHandler):
     def handle(result):
         res = result.json()
         return PropellerObject(res)
+
 

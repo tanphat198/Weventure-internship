@@ -2,7 +2,6 @@ from services.object import ExchangeRateObject
 from core.delegation.responsehandler import ResponseHandler
 from core.resource import APIResource, Configuration
 
-
 class ExchangeService(APIResource):
     def __init__(self):
         config = Configuration("https://api.exchangeratesapi.io", auth_handler=False, handler=ExchangeRateHandler, service_name='Exchange Rate Service(AMP)')

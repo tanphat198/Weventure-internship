@@ -1,4 +1,3 @@
-
 class ExchangeRateObject:
     def __init__(self, result):
         self.base = result['base']
@@ -24,3 +23,5 @@ class PropellerObject:
 
     def __str__(self):
         return '{} - {}'.format(self.result, self.meta)
+        
+        

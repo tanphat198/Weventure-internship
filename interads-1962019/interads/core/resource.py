@@ -1,7 +1,5 @@
-
 import requests
 import json
-
 from core.delegation.responsehandler import ResponseHandler
 from core.exception.exceptions import  ResourceFieldNotFoundException
 from services.object import ExchangeRateObject

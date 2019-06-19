@@ -2,7 +2,6 @@ from services.propeller import PropellerService
 import unittest
 import httpretty
 
-
 class test_function(unittest.TestCase):
     @httpretty.activate
     def test_request_adv_statistics(self):
@@ -14,3 +13,4 @@ class test_function(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
