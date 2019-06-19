@@ -1,6 +1,6 @@
 from core.delegation.responsehandler import ResponseHandler
 from core.resource import APIResource, Configuration
-from services.object import PropellerObject
+from services.responses import PropellerObject
 
 class PropellerService(APIResource):
     def __init__(self):

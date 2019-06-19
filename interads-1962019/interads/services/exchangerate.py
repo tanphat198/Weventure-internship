@@ -1,4 +1,4 @@
-from services.object import ExchangeRateObject
+from services.responses import ExchangeRateObject
 from core.delegation.responsehandler import ResponseHandler
 from core.resource import APIResource, Configuration
 
