@@ -1,9 +1,8 @@
 import unittest
 import httpretty
-from models.exchangerate import ExchangeService
+from services.exchangerate import ExchangeService
 
 class test_function(unittest.TestCase):
-
     @httpretty.activate()
     def test_request_latest(self):
         body_from_latest = '{"abc"}'
@@ -27,7 +26,6 @@ class test_function(unittest.TestCase):
         Response_from_main = ExchangeService().get_by_base('USD')
         self.assertEqual(Response_from_main,body_from_base)
 
-
     @httpretty.activate
     def test_reqest_symbols(self):
         body_from_symbols = '{"base":"EUR", "rates":{"BGN":1.6989}, "symbols" : {"ILS","JPY"}}'
@@ -38,3 +36,4 @@ class test_function(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

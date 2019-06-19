@@ -14,7 +14,6 @@ def status_error_handle(result):
         exception.response = result
         raise exception
 
-
 class HTTPRequestException(HTTPError):
     """HTTP Exception"""
 
@@ -23,26 +22,21 @@ class HTTPRequestException(HTTPError):
         self.message = message
         self.response = None
 
-
 class UnauthorizedException(HTTPRequestException):
     """Unauthorized exception: 401 error"""
     pass
-
 
 class BadRequestException(HTTPRequestException):
     """Bad request from server: 4xx error"""
     pass
 
-
 class ServerException(HTTPRequestException):
     """Exception from service: 5xx error"""
     pass
 
-
 class ConnectionException(HTTPError):
     """Can not establish connection"""
     pass
-
 
 class ResourceFieldNotFoundException(Exception):
     def __init__(self, resource, field):
@@ -54,3 +48,4 @@ class ResourceFieldNotFoundException(Exception):
         """
         self.message = "Resource(%s) does not support field(%s). Declared(%s)" % (
             type(resource), field, resource.fields)
+

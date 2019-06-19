@@ -1,5 +1,4 @@
 import types
-
 import inject as injection
 
 class ComponentContainer(object):
@@ -8,6 +7,7 @@ class ComponentContainer(object):
     For now we only support IoC
     """
     _services = {}
+
     def bind(self, cls, instance_or_callable):
         """
         Declare Singleton service for

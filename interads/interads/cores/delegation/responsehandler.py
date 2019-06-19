@@ -4,3 +4,4 @@ class ResponseHandler(object):
 
     def on_error(self, error, request):
         pass
+
