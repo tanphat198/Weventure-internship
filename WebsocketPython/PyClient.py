@@ -1,8 +1,6 @@
 import asyncio
 import websockets
-
 import json
-
 
 listfruits = '{"orange":"Qua cam", "strawberry":"Day tay", '\
              '"grape":"Nho", "durian":"Sau rieng"}'
@@ -15,3 +13,4 @@ async def message():
 
 
 asyncio.get_event_loop().run_until_complete(message())
+
